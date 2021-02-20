@@ -1,0 +1,40 @@
+<html>
+    <style>
+        body {
+          background-image: url('library.jpg');
+        }
+        </style>
+        <style>
+            a:link, a:visited {
+              background-color: #f44336;
+              color: white;
+              padding: 10px 15px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+            }
+            
+            a:hover, a:active {
+              background-color: red;
+            }
+            </style>
+<head>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>
+        <a href="/">Insert Book</a>
+        <a href="/getbooks">List Books</a>
+        <a href="/updatebook">Update Book</a>
+        <a href="/deletebook">Delete Book</a>
+    </h1>
+    <form action="/addnewbook" method="POST">
+        Title <input type="text"  name="title" /> </br>
+        Author <input type="text"  name="author" /> </br>
+        ISBN <input type="number"  name="ISBN"  value="<%= newISBN %>"/> </br>
+        Pub_date <input type="date"  name="pub_date" /> </br>
+        Summary <input type="text"  name="summary" /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+</html>

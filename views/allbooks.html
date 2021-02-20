@@ -1,0 +1,35 @@
+<html>
+<head>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+</head>
+<body>
+    <h2>
+        <a href="/">Insert Book</a>
+        <a href="/getbooks">List Books</a>
+        <a href="/updatebook">Update Book</a>
+        <a href="/deletebook">Delete Book</a>
+    </h2>
+    <h1>List Users</h1> </br>
+    
+    <table>
+        <tr>
+            <td>title</td>
+            <td>author</td>
+            <td>ISBN</td>
+            <td>Pub_date</td>
+            <td>bookSummary</td>
+        </tr>
+        <% for (let i=0;i<booksArray.length;i++){ %>
+            <tr>
+                <td><%= booksArray[i].title %> </td>
+                <td><%= booksArray[i].author %> </td>
+                <td><%= booksArray[i].ISBN %></td>
+                <td><%= booksArray[i].Pub_date %></td>
+                <td><%= booksArray[i].bookSummary %></td>
+            </tr>
+            <%}%>
+    </table>
+</body>
+</html>
